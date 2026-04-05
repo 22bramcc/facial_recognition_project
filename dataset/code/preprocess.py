@@ -30,4 +30,4 @@ for person in os.listdir(input_folder):
             
             # Save processed image
             output_path = os.path.join(output_person_path, img_name)
-            cv2.imwrite(output_path, img * 255)
+            cv2.imwrite(output_path, (img * 255).astype("uint8"))
